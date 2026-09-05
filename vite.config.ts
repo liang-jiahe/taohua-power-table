@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { sites } from '@openai/sites-vite-plugin'
 
 export default defineConfig({
-  base: '/',
+  base: process.env.GITHUB_ACTIONS ? '/taohua-power-table/' : '/',
   plugins: [
     react(),
     sites(),
